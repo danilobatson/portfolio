@@ -1,0 +1,101 @@
+body {
+	max-width: 1500px;
+	max-height: auto;
+	margin: auto;
+	margin-top: 20px;
+	font-family: 'Signika', cursive, sans-serif;
+	border-radius: 12px;
+	color: #323232;
+}
+
+html {
+	background-color: rgba(255, 255, 255, 0.74);
+}
+
+/* .navs{
+  grid-area: 3 / 2/ span 2 / span 3;
+} */
+.grid {
+	margin: auto;
+	height: 95%;
+	width: 95%;
+}
+
+nav {
+	display: flex;
+
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	flex-direction: row;
+}
+
+.links {
+	font-size: large;
+}
+
+.links a {
+	color: #323232;
+	font-weight: 900;
+	font-size: 1.5em;
+	margin: 0.3em;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.7em;
+	margin-left: 3%;
+}
+p {
+	line-height: 2em;
+	font-size: 1.2em;
+}
+
+#headshot {
+	max-height: 600px;
+	width: auto;
+	padding: 30px;
+}
+
+.about-me {
+	display: flex;
+	margin-top: 5em;
+}
+
+.work {
+	display: flex;
+}
+
+i {
+	height: 300px;
+	width: auto;
+}
+#skills {
+	margin-top: 5em;
+	display: flex;
+	justify-content: space-evenly;
+	height: 122px;
+	width: auto;
+}
+
+#contact {
+	margin-top: 3em;
+	padding: auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+.fa-linkedin {
+	color: black;
+}
