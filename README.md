@@ -1,4 +1,4 @@
-# Danilo Batson' Portfolio 
+# Danilo Batson's Portfolio 
 
 
-One page portfolio site that illustrates some of the projects that Danilo has worked on. Along side his work is a short bio, social links, and attained technical skills. 
+One page portfolio site that illustrates some of the projects that Danilo has worked on. Here you can find a short bio, social links, past work, and attained technical skills. 
