@@ -1,7 +1,20 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 import React from 'react';
 import classnames from 'classnames';
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from 'perfect-scrollbar';
+
+  import { library } from '@fortawesome/fontawesome-svg-core';
+  import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+      import {
+        IconLookup,
+        IconDefinition,
+        findIconDefinition,
+      } from '@fortawesome/fontawesome-svg-core';
 // reactstrap components
 import {
   Button,
@@ -27,10 +40,15 @@ import {
 } from 'reactstrap';
 
 // core components
-import ExamplesNavbar from '../components/ExamplesNavbar.js';
+import ExamplesNavbar from '../components/ExamplesNavbar';
 import Footer from '../components/Footer.js';
 
 import Image from 'next/image';
+import Link from 'next/link.js';
+
+    const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'coffee' };
+    const coffeeIconDefinition: IconDefinition =
+      findIconDefinition(coffeeLookup);
 
 const carouselItems = [
   {
@@ -94,11 +112,31 @@ export default function ProfilePage() {
               <Row className='row-grid justify-content-between align-items-center text-left'>
                 <Col lg='6' md='6'>
                   <h1 className='text-white'>Danilo Batson</h1>
-                  <p className='text-white mb-3'>
-                    A wonderful serenity has taken possession of my entire soul,
-                    like these sweet mornings of spring which I enjoy with my
-                    whole heart. I am alone, and feel...
-                  </p>
+                  <div className='about-section text-white mb-3'>
+                    <p>Hello!</p>
+                    <p>
+                      I'm Danilo Batson and I am a full stack web developer. I'm
+                      currently working on my portfolio and learning new skills
+                      everyday. I'm looking for next positiont that will
+                      continue allow to me grow as a web developer to boost the
+                      foundation I have in place.
+                    </p>
+                    <p>
+                      I currently work full-time at a startup called{' '}
+                      <Link href='https://www.mongooseresearch.com/'>
+                        Mongoose Research
+                      </Link>
+                      as a Software Engineer where I work on our platform's
+                      integrations and chat platform. Before working at Mongoose
+                      Research, I worked at Credit Key as a React developer.
+                      Prior to starting my coding career, I launched a nonprofit
+                      right after the start of COVID-19 called Spicy Green Book
+                      to help empower Black-owned businesses. In creating and
+                      running this nonprofit I quickly learned the various
+                      aspects of running a tech startup.
+                    </p>
+                    <FontAwesomeIcon icon={coffeeIconDefinition} />
+                  </div>
                   <div className='btn-wrapper mb-3'>
                     <p className='category text-success d-inline'>
                       From 9.99%/mo
