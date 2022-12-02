@@ -6,15 +6,15 @@ import classnames from 'classnames';
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from 'perfect-scrollbar';
 
-  import { library } from '@fortawesome/fontawesome-svg-core';
-  import { fas } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas);
-      import {
-        IconLookup,
-        IconDefinition,
-        findIconDefinition,
-      } from '@fortawesome/fontawesome-svg-core';
+import {
+  IconLookup,
+  IconDefinition,
+  findIconDefinition,
+} from '@fortawesome/fontawesome-svg-core';
 // reactstrap components
 import {
   Button,
@@ -46,9 +46,8 @@ import Footer from '../components/Footer.js';
 import Image from 'next/image';
 import Link from 'next/link.js';
 
-    const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'coffee' };
-    const coffeeIconDefinition: IconDefinition =
-      findIconDefinition(coffeeLookup);
+const coffeeLookup: IconLookup = { prefix: 'fas', iconName: 'coffee' };
+const coffeeIconDefinition: IconDefinition = findIconDefinition(coffeeLookup);
 
 const carouselItems = [
   {
@@ -95,25 +94,15 @@ export default function ProfilePage() {
   return (
     <>
       <ExamplesNavbar />
-      <div className='wrapper'>
-        <div className='page-header'>
-          <Image
-            alt='...'
-            className='dots'
-            src={require('assets/img/dots.png')}
-          />
-          <Image
-            alt='...'
-            className='path'
-            src={require('assets/img/path4.png')}
-          />
+      <Container className='wrapper'>
+        <div>
           <Container className='align-items-center'>
             <div className='content-center'>
               <Row className='row-grid justify-content-between align-items-center text-left'>
-                <Col lg='6' md='6'>
-                  <h1 className='text-white'>Danilo Batson</h1>
+                <Col className='mt-5 pt-5' lg='6' md='6'>
                   <div className='about-section text-white mb-3'>
-                    <p>Hello!</p>
+                    <h2>Danilo Batson's Portfolio</h2>
+                    <h4>About Me</h4>
                     <p>
                       I'm Danilo Batson and I am a full stack web developer. I'm
                       currently working on my portfolio and learning new skills
@@ -121,66 +110,83 @@ export default function ProfilePage() {
                       continue allow to me grow as a web developer to boost the
                       foundation I have in place.
                     </p>
-                    <p>
+                    <p className='pt-1'>
                       I currently work full-time at a startup called{' '}
                       <Link href='https://www.mongooseresearch.com/'>
                         Mongoose Research
-                      </Link>
+                      </Link>{' '}
                       as a Software Engineer where I work on our platform's
                       integrations and chat platform. Before working at Mongoose
-                      Research, I worked at Credit Key as a React developer.
+                      Research, I worked at{' '}
+                      <Link href='https://www.creditkey.com/'>Credit Key</Link>{' '}
+                      as a Frontend Developer.
+                    </p>
+                    <p className='pt-1'>
                       Prior to starting my coding career, I launched a nonprofit
-                      right after the start of COVID-19 called Spicy Green Book
+                      right after the start of COVID-19 called{' '}
+                      <Link href='https://www.spicygreenbook.org/'>
+                        Spicy Green Book
+                      </Link>
                       to help empower Black-owned businesses. In creating and
                       running this nonprofit I quickly learned the various
                       aspects of running a tech startup.
                     </p>
-                    <FontAwesomeIcon icon={coffeeIconDefinition} />
-                  </div>
-                  <div className='btn-wrapper mb-3'>
-                    <p className='category text-success d-inline'>
-                      From 9.99%/mo
-                    </p>
-                    <Button
-                      className='btn-link'
-                      color='success'
-                      href='#pablo'
-                      onClick={(e) => e.preventDefault()}
-                      size='sm'
-                    >
-                      <i className='tim-icons icon-minimal-right' />
-                    </Button>
-                  </div>
-                  <div className='btn-wrapper'>
-                    <div className='button-container'>
-                      <Button
-                        className='btn-icon btn-simple btn-round btn-neutral'
-                        color='default'
-                        href='#pablo'
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className='fab fa-twitter' />
-                      </Button>
-                      <Button
-                        className='btn-icon btn-simple btn-round btn-neutral'
-                        color='default'
-                        href='#pablo'
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className='fab fa-dribbble' />
-                      </Button>
-                      <Button
-                        className='btn-icon btn-simple btn-round btn-neutral'
-                        color='default'
-                        href='#pablo'
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className='fab fa-facebook' />
-                      </Button>
+                    <div className='mt-4'>
+                      <small>Spicy Green Book</small>
+                      <p className='pt-1'>
+                        Spicy Green Book is a completely volunteer based native
+                        mobile ap and web app that helps people discover
+                        Black-owned restaurants near them. I worked with various
+                        volunteer product/project managers, designers,
+                        photographers, marketers, videographers, and programmers
+                        all collaborating to help bring a software product to
+                        market.
+                      </p>
+                      <p className='pt-1'>
+                        We were constantly onboarding new people and quickly
+                        integrating them into our workflow. We could always use
+                        more programmers so I decided to learn how to code so I
+                        could help.
+                      </p>
+                    </div>
+                    <div className='mt-4'>
+                      <small>Developer Beginnings</small>
+
+                      <p className='pt-1'>
+                        I did a lot of self-teaching as well as enrolling myself
+                        in a coding camp! I have several certifications from{' '}
+                        <Link href='https://fullstackopen.com/'>
+                          Full Stack Open,{' '}
+                        </Link>
+                        <Link href='https://zerotomastery.io//'>
+                          ZeroToMastery,{' '}
+                        </Link>
+                        <Link href='https://www.codecademy.com/'>
+                          Codecademy,{' '}
+                        </Link>
+                        <Link href='https://www.udemy.com/'>Udemy, </Link>
+                        <Link href='https://www.theodinproject.com/'>
+                          The Odin Project,{' '}
+                        </Link>
+                        and{' '}
+                        <Link href='https://www.spicygreenbook.org/'>
+                          Free Code Camp.
+                        </Link>{' '}
+                        I have quickly learned that I really enjoy programming
+                        and have continued to contribute to Spicy Green Book as
+                        well as other various projects.
+                      </p>
+                      <p className='pt-1'>
+                        I definitely have a passion for programming and would
+                        like to make it into a career. Please consider bringing
+                        me into your organization. I learn fast and am looking
+                        forward to being a value-added employee as fast as
+                        possible!
+                      </p>
                     </div>
                   </div>
                 </Col>
-                <Col lg='4' md='5'>
+                <Col lg='4' md='5' className='pt-0'>
                   <Image
                     alt='...'
                     className='img-fluid'
@@ -189,201 +195,6 @@ export default function ProfilePage() {
                 </Col>
               </Row>
             </div>
-            {/* <Row>
-              <Col lg='6' md='6'>
-                <h1 className='profile-title text-left'>Mike Scheinder</h1>
-                <h5 className='text-on-back'>01</h5>
-                <p className='profile-description'>
-                  Offices parties lasting outward nothing age few resolve.
-                  Impression to discretion understood to we interested he
-                  excellence. Him remarkably use projection collecting. Going
-                  about eat forty world has round miles.
-                </p>
-                <div className='btn-wrapper profile pt-3'>
-                  <Button
-                    className='btn-icon btn-round'
-                    color='twitter'
-                    href='https://twitter.com/creativetim'
-                    id='tooltip639225725'
-                    target='_blank'
-                  >
-                    <i className='fab fa-twitter' />
-                  </Button>
-                  <UncontrolledTooltip delay={0} target='tooltip639225725'>
-                    Follow us
-                  </UncontrolledTooltip>
-                  <Button
-                    className='btn-icon btn-round'
-                    color='facebook'
-                    href='https://www.facebook.com/creativetim'
-                    id='tooltip982846143'
-                    target='_blank'
-                  >
-                    <i className='fab fa-facebook-square' />
-                  </Button>
-                  <UncontrolledTooltip delay={0} target='tooltip982846143'>
-                    Like us
-                  </UncontrolledTooltip>
-                  <Button
-                    className='btn-icon btn-round'
-                    color='dribbble'
-                    href='https://dribbble.com/creativetim'
-                    id='tooltip951161185'
-                    target='_blank'
-                  >
-                    <i className='fab fa-dribbble' />
-                  </Button>
-                  <UncontrolledTooltip delay={0} target='tooltip951161185'>
-                    Follow us
-                  </UncontrolledTooltip>
-                </div>
-              </Col>
-              <Col className='ml-auto mr-auto' lg='4' md='6'>
-                <Card className='card-coin card-plain'>
-                  <CardHeader>
-                    <Image
-                      alt='...'
-                      className='img-center img-fluid rounded-circle'
-                      src={require('assets/img/mike.jpg')}
-                    />
-                    <h4 className='title'>Transactions</h4>
-                  </CardHeader>
-                  <CardBody>
-                    <Nav
-                      className='nav-tabs-primary justify-content-center'
-                      tabs
-                    >
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 1,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(1);
-                          }}
-                          href='#pablo'
-                        >
-                          Wallet
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 2,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(2);
-                          }}
-                          href='#pablo'
-                        >
-                          Send
-                        </NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink
-                          className={classnames({
-                            active: tabs === 3,
-                          })}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTabs(3);
-                          }}
-                          href='#pablo'
-                        >
-                          News
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
-                    <TabContent
-                      className='tab-subcategories'
-                      activeTab={'tab' + tabs}
-                    >
-                      <TabPane tabId='tab1'>
-                        <Table className='tablesorter' responsive>
-                          <thead className='text-primary'>
-                            <tr>
-                              <th className='header'>COIN</th>
-                              <th className='header'>AMOUNT</th>
-                              <th className='header'>VALUE</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>BTC</td>
-                              <td>7.342</td>
-                              <td>48,870.75 USD</td>
-                            </tr>
-                            <tr>
-                              <td>ETH</td>
-                              <td>30.737</td>
-                              <td>64,53.30 USD</td>
-                            </tr>
-                            <tr>
-                              <td>XRP</td>
-                              <td>19.242</td>
-                              <td>18,354.96 USD</td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </TabPane>
-                      <TabPane tabId='tab2'>
-                        <Row>
-                          <Label sm='3'>Pay to</Label>
-                          <Col sm='9'>
-                            <FormGroup>
-                              <Input
-                                placeholder='e.g. 1Nasd92348hU984353hfid'
-                                type='text'
-                              />
-                              <FormText color='default' tag='span'>
-                                Please enter a valid address.
-                              </FormText>
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Label sm='3'>Amount</Label>
-                          <Col sm='9'>
-                            <FormGroup>
-                              <Input placeholder='1.587' type='text' />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                        <Button
-                          className='btn-simple btn-icon btn-round float-right'
-                          color='primary'
-                          type='submit'
-                        >
-                          <i className='tim-icons icon-send' />
-                        </Button>
-                      </TabPane>
-                      <TabPane tabId='tab3'>
-                        <Table className='tablesorter' responsive>
-                          <thead className='text-primary'>
-                            <tr>
-                              <th className='header'>Latest Crypto News</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>The Daily: Nexo to Pay on Stable...</td>
-                            </tr>
-                            <tr>
-                              <td>Venezuela Begins Public of Nation...</td>
-                            </tr>
-                            <tr>
-                              <td>PR: BitCanna – Dutch Blockchain...</td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </TabPane>
-                    </TabContent>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row> */}
           </Container>
         </div>
         <div className='section'>
@@ -529,7 +340,7 @@ export default function ProfilePage() {
           </Container>
         </section>
         <Footer />
-      </div>
+      </Container>
     </>
   );
 }
